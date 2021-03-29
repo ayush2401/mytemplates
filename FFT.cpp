@@ -1,3 +1,8 @@
+ll power(ll a, ll b, ll m, ll ans = 1) {
+    for(; b; b >>= 1, a = 1LL * a * a % m) if(b & 1) ans = 1LL * ans * a % m;
+    return ans;
+}
+
 namespace fft {
 const ll root = 31;
 const ll root_1 = power(root, mod - 2,mod);
